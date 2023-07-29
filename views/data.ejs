@@ -1,0 +1,23 @@
+
+<%if(isUserLoggedIn){%>
+<div class="container">
+      <h1><%= user.charAt(0).toUpperCase() + user.slice(1)%>, Here is your data!</h1>
+    <div class="actions">
+      <p><%=data %></p>
+    </div>
+</div>
+<div class="container">
+      <h1>Add data</h1>
+      <form action="/add-data" method="post">
+        <textarea name="inputData" id="" cols="50" rows="4" placeholder="Enter the data" ></textarea>
+      <div class="actions">
+        <button type = "submit" class="btn">Add</button>
+      </div>
+    </form>
+</div>
+<%} %>
+    
+
+<script src="client.js"></script>
+</body>
+</html>
